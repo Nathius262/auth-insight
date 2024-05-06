@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% load static %}
+{% load hitcount_tags %}
+
+{% block content %}
+	<style>
+		.bg_image{
+			height: 300px;
+			object-fit: contain;
+			overflow: hidden;
+		}
+		.col-md-6:hover{
+			transform: translateY(-20px);
+			transition: transform 1s ease-in-out;
+		}
+		.p-link:hover{
+			background-color: var(--grey);
+			transition: 1s background-color ease;
+		}
+		.view{
+			font-size: 13px;
+			letter-spacing: 1px;
+			color: #aaa;
+		}
+
+	</style>
+
+	<div class="container-fluid" style="overflow-x: hidden;">
+		<div class="row">
+			<main class="ms-sm-auto px-md-4">
+				<h1>AUTH-INSIGHT</h1>
+				<P>Auth-insight is intended to improve user authentication procedures for companies. Auth-insight seeks to address typical authentication issues including tiredness, dissatisfaction, and overload of logins by combining big data analysis and machine learning. The application includes data gathering for analysis, insights production based on machine learning categorization, and a single sign-on (SSO) mechanism for simplified authentication across various services.</P>
+			</main>
+		</div>
+	</div>
+{% endblock %}
