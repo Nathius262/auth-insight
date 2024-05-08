@@ -38,3 +38,16 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 This project is licensed under the MIT License.
+
+
+Stephan Wiefling, Paul René Jørgensen, Sigurd Thunem, and Luigi Lo
+Iacono: Pump Up Password Security! Evaluating and Enhancing Risk-Based
+Authentication on a Real-World Large-Scale Online Service. In: ACM
+Transactions on Privacy and Security (2022). doi: [10.1145/3546069](https://doi.org/10.1145/3546069)
+
+
+
+[Pump Up Password Security! Evaluating and Enhancing Risk-Based Authentication on a Real-World Large-Scale Online Service]: https://doi.org/10.1145/3546069
+[Risk-Based Authentication (RBA)]: https://riskbasedauthentication.org
+[Freeman et al. (2016)]: https://doi.org/10.14722/ndss.2016.23240
+[Creative Commons Attribution 4.0 International (CC BY 4.0)]: https://creativecommons.org/licenses/by/4.0/
