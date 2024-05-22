@@ -39,3 +39,12 @@ class CustomUser(AbstractBaseUser):
         all_permissions = email_permissions  # | username_permissions
 
         return all_permissions
+
+
+class LoginRecord(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    ip_address = models.GenericIPAddressField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.user.username} - {self.ip_address} - {self.timestamp}'

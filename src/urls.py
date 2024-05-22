@@ -5,5 +5,6 @@ from authentication.views import index_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('allauth.urls')),
+    path('', include('authentication.urls')),
     path('', index_view, name='index')
 ]
