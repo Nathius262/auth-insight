@@ -15,7 +15,7 @@ A web application built with Django, Auth-insight is intended to improve user au
 The clustering analysis results are shown and discussed in this section. Finding clusters and anomalies in user authentication activities is the goal of using KMeans clustering to the authentication data. To understand the patterns and trends in the data, the clustering findings are looked at. Nonetheless, the clustering approach acknowledges several limitations and constraints, such as inconclusive results and challenges in identifying meaningful clusters.
 
 ![Screenshot](k-means_elbowoutput.png)
-![Screenshot](login success_ip address_comparision_output.png)
+![Screenshot](login_success_ip_address_comparision_output.png)
 ![Screenshot](k-clustering_output.png)
 
 ## Random Forest Results:
