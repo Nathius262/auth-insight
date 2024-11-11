@@ -1,75 +1,78 @@
-# auth-insight
-A web application built with Django, Auth-insight is intended to improve user authentication procedures for companies. Auth-insight seeks to address typical authentication issues including tiredness, dissatisfaction, and overload of logins by combining big data analysis and machine learning. The application includes data gathering for analysis, insights production based on machine learning categorization, and a single sign-on (SSO) mechanism for simplified authentication across various services. Ongoing authentication system optimization is ensured by constant monitoring. AuthInsight offers practical insights to enhance enterprise security and user experiences.
+# Auth-Insight
+**Auth-Insight** is a Django-based web application designed to enhance enterprise-level user authentication processes through big data analysis and machine learning. This project is dedicated to addressing common authentication challenges—such as login fatigue, frustration, and overload—by applying advanced data analysis and improving model accuracy through a Random Forest classifier. Auth-Insight incorporates Single Sign-On (SSO), data collection for analysis, and continuous optimization, ultimately aiming to enhance security and user experience for enterprise authentication systems.
 
 ## Features
 
-- Single Sign-On (SSO): Streamline user authentication across multiple organizational services with a seamless login experience.
-- Big Data Integration: Collect, store, and analyze large volumes of user authentication data to gain valuable insights.
-- Machine Learning Classification: Utilize machine learning algorithms to classify user activities and identify authentication-related challenges.
-- Insights Generation: Generate actionable insights into common issues such as login overload, login fatigue, and login frustration.
-- Continuous Monitoring: Deployed solution includes monitoring mechanisms for ongoing optimization and performance evaluation.
+- **Single Sign-On (SSO)**: Streamlines user authentication across multiple organizational services, delivering a seamless login experience.
+- **Big Data Integration**: Collects, stores, and analyzes large volumes of user authentication data to generate valuable insights.
+- **Random Forest Classification**: Utilizes an optimized Random Forest model to classify user activities, identify anomalies, and improve authentication accuracy by at least 3%.
+- **Insights Generation**: Provides actionable insights into common authentication issues, such as login fatigue, overload, and user frustration.
+- **Continuous Monitoring**: Includes monitoring mechanisms for ongoing model evaluation, ensuring consistent authentication system optimization and adaptation to emerging security threats.
+
+## Improvements in Model Accuracy
+The **Improving Model Accuracy for User Authentication using Random Forest** branch focuses on enhancing the Random Forest model's accuracy, which achieved a significant improvement over initial clustering-based approaches. Key enhancements include:
+
+- **Feature Engineering**: Incorporating new features such as login frequency and unique user-based behavioral attributes to increase model accuracy.
+- **Hyperparameter Tuning**: Extensive tuning of the Random Forest model’s parameters, resulting in a final model accuracy improvement of over 4%.
+- **Threshold Adjustment**: ROC-AUC-based threshold adjustment to improve sensitivity and specificity for critical authentication decisions.
 
 
-## K-Cluster Results:
+## Random Forest Results
 
-The clustering analysis results are shown and discussed in this section. Finding clusters and anomalies in user authentication activities is the goal of using KMeans clustering to the authentication data. To understand the patterns and trends in the data, the clustering findings are looked at. Nonetheless, the clustering approach acknowledges several limitations and constraints, such as inconclusive results and challenges in identifying meaningful clusters.
+The integration of the optimized Random Forest model significantly improved the performance of user authentication analysis. After extensive data preprocessing, feature engineering, and hyperparameter tuning, the model delivered superior accuracy, recall, and precision metrics. This model effectively identifies successful and unsuccessful authentication attempts, providing enhanced security and user experience.
 
-![Screenshot](k-means_elbowoutput.png)
-![Screenshot](login_success_ip_address_comparision_output.png)
-![Screenshot](k-clustering_output.png)
+### Model Performance
+- **Accuracy**: 82.35%
+- **ROC-AUC Score**: 72.5%
+- **Improved Precision**: Particularly effective in identifying successful authentication attempts, making it a valuable addition to enterprise security.
 
-## Random Forest Results:
-
-The integration of Random Forest into the authentication system provided significant improvements in the analysis of user authentication data. After extensive preprocessing and hyperparameter tuning, the Random Forest model demonstrated superior performance and accuracy. Below are the detailed results and analysis.
-
-![Screenshot](classification_output.png)
-![Screenshot](prediction_output.png)
-![Screenshot](ROC_output.png)
+![Screenshot](classification_comparing_output.png.png)
+![Screenshot](model_accuracy.png)
+![Screenshot](ROC_comparing_output.png)
 
 ### Discussion
-The Random Forest model's results underscore its effectiveness in handling the authentication data compared to the previously attempted KMeans clustering. The ensemble nature of Random Forest, combined with its capability to manage both categorical and numerical features, provided more reliable and accurate results. The model's precision, particularly in identifying successful authentication attempts, suggests that it can be a valuable tool in enhancing the security and user experience of the authentication system.
-
-Future efforts will focus on addressing the lower performance metrics for unsuccessful authentication attempts and exploring additional features or alternative machine learning models to further optimize the system's accuracy and robustness.
+The Random Forest model’s results demonstrate its effectiveness in handling large and complex authentication datasets, providing higher reliability than clustering techniques. The model’s ability to handle categorical and numerical data simultaneously enhances its accuracy and sensitivity. Future work will focus on improving performance for unsuccessful login attempts and exploring alternative models to further optimize accuracy and robustness.
 
 ## Installation
 
-1. Clone the repository:
+To set up the application locally:
 
-```bash
-git clone https://github.com/Nathius262/auth-insight.git
-cd auth-insight
-```
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Nathius262/auth-insight.git
+    cd auth-insight
+    ```
 
-install dependencies
-```
-pip install -r requirements.txt
-```
+2. **Install Dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-make migrations
-```
-python manage.py migrate
-```
+3. **Apply Migrations**:
+    ```bash
+    python manage.py migrate
+    ```
 
-Run server
-```
-python manage.py runserver
-```
+4. **Run the Server**:
+    ```bash
+    python manage.py runserver
+    ```
+
+## Branch Details
+
+For improvements specific to this project, please refer to the **Improving-Model-Accuracy-for-User-Authentication-using-Random-Forest** branch.
 
 ## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
+
+Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your proposed changes.
 
 ## License
+
 This project is licensed under the MIT License.
 
+## References
 
-Stephan Wiefling, Paul René Jørgensen, Sigurd Thunem, and Luigi Lo
-Iacono: Pump Up Password Security! Evaluating and Enhancing Risk-Based
-Authentication on a Real-World Large-Scale Online Service. In: ACM
-Transactions on Privacy and Security (2022). doi: [10.1145/3546069](https://doi.org/10.1145/3546069)
+- **Stephan Wiefling, Paul René Jørgensen, Sigurd Thunem, and Luigi Lo Iacono**: *Pump Up Password Security! Evaluating and Enhancing Risk-Based Authentication on a Real-World Large-Scale Online Service*. In: ACM Transactions on Privacy and Security (2022). DOI: [10.1145/3546069](https://doi.org/10.1145/3546069)
+- **Risk-Based Authentication (RBA)**: [https://riskbasedauthentication.org](https://riskbasedauthentication.org)
+- **Freeman et al. (2016)**: *Evaluating Risk-Based Authentication* [10.14722/ndss.2016.23240](https://doi.org/10.14722/ndss.2016.23240)
 
-
-
-[Pump Up Password Security! Evaluating and Enhancing Risk-Based Authentication on a Real-World Large-Scale Online Service]: https://doi.org/10.1145/3546069
-[Risk-Based Authentication (RBA)]: https://riskbasedauthentication.org
-[Freeman et al. (2016)]: https://doi.org/10.14722/ndss.2016.23240
-[Creative Commons Attribution 4.0 International (CC BY 4.0)]: https://creativecommons.org/licenses/by/4.0/
