@@ -26,7 +26,7 @@ The integration of the optimized Random Forest model significantly improved the 
 - **ROC-AUC Score**: 72.5%
 - **Improved Precision**: Particularly effective in identifying successful authentication attempts, making it a valuable addition to enterprise security.
 
-![Screenshot](classification_comparing_output.png.png)
+![Screenshot](classification_comparing_output.png)
 ![Screenshot](model_accuracy.png)
 ![Screenshot](ROC_comparing_output.png)
 
